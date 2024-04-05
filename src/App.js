@@ -13,24 +13,8 @@ function App() {
     <LoginProvider>
       <Router>
         <Routes>
-          {/* Redirect to intro page if authenticated */}
-          {/* Make sure isAuthenticated is correctly set to true after login */}
-          {isAuthenticated && <Route path="/login" element={<Navigate to="/intro" />} />}
-          
-          {/* Redirect to login page if not authenticated */}
-          {/* Make sure isAuthenticated is correctly set to false after logout */}
-          {!isAuthenticated && <Route path="/" element={<Navigate to="/login" />} />}
-          {!isAuthenticated && <Route path="/intro" element={<Navigate to="/login" />} />}
-          
-          {/* Login route */}
-          <Route path="/login" element={<Login />} />
-          
-          {/* CalculatorPage */}
+          <Route path="/" element={<Login />} />
           <Route path="/calculator" element={<Intro />} />
-          
-          {/* Show Intro component only if authenticated */}
-          {/* Make sure isAuthenticated is correctly set to true after login */}
-          {isAuthenticated && <Route path="/calculator" element={<Intro />} />}
         </Routes>
       </Router>
     </LoginProvider>
