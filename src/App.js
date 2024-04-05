@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/calculator" element={<Intro />} />
+          <Route path="/intro" element={<Intro />} />
         </Routes>
       </Router>
     </LoginProvider>
