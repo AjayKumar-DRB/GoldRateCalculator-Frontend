@@ -25,9 +25,12 @@ function App() {
           {/* Login route */}
           <Route path="/login" element={<Login />} />
           
+          {/* CalculatorPage */}
+          <Route path="/calculator" element={<Intro />} />
+          
           {/* Show Intro component only if authenticated */}
           {/* Make sure isAuthenticated is correctly set to true after login */}
-          {isAuthenticated && <Route path="/intro" element={<Intro />} />}
+          {isAuthenticated && <Route path="/calculator" element={<Intro />} />}
         </Routes>
       </Router>
     </LoginProvider>
