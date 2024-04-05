@@ -18,7 +18,6 @@ function App() {
           {/* Redirect to login page if not authenticated */}
           {!isAuthenticated && <Route path="/" element={<Navigate to="/login" />} />}
           {!isAuthenticated && <Route path="/intro" element={<Navigate to="/login" />} />}
-          <Route path="/login" element={<Login />} />
           {/* Show Intro component only if authenticated */}
           {isAuthenticated && <Route path="/intro" element={<Intro />} />}
         </Routes>
